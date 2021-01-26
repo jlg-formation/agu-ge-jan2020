@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleService } from 'src/app/services/article.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   // tslint:disable-next-line: quotemark
   welcome = 'tournevis cruciforme';
-  constructor() {}
+  constructor(public articleService: ArticleService) {}
 
   ngOnInit(): void {}
 }

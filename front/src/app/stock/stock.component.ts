@@ -7,7 +7,7 @@ import { ArticleService } from '../services/article.service';
   styleUrls: ['./stock.component.scss'],
 })
 export class StockComponent implements OnInit {
-  constructor(public articleService: ArticleService) {}
+  constructor(public readonly articleService: ArticleService) {}
 
   ngOnInit(): void {}
 }

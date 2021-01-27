@@ -3,7 +3,7 @@
   <form [formGroup]="f" (ngSubmit)="submit()">
     <label>
       <div>Nom</div>
-      <input type="text" formControlName="name" />
+      <input appAutofocus type="text" formControlName="name" />
       <div class="error">
         <div [hidden]="f.controls.name.valid">
           <div *ngIf="f.controls.name.errors?.required">Champ obligatoire</div>
@@ -16,11 +16,11 @@
     </label>
     <label>
       <div>Prix</div>
-      <input type="text" formControlName="price" />
+      <input type="number" formControlName="price" />
     </label>
     <label>
       <div>Quantité</div>
-      <input type="text" formControlName="qty" />
+      <input type="number" formControlName="qty" />
     </label>
     <nav class="buttons">
       <button type="button" routerLink="..">Retour</button>

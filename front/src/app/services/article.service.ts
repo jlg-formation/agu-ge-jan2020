@@ -30,4 +30,11 @@ export class ArticleService {
     this.articles.push(article);
     this.save();
   }
+
+  remove(articleToBeRemoved: Article[]): void {
+    this.articles = this.articles.filter(
+      (a) => !articleToBeRemoved.includes(a)
+    );
+    this.save();
+  }
 }

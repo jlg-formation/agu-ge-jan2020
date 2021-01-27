@@ -1,6 +1,6 @@
 <main>
   <h1>Ajout d'un article</h1>
-  <form>
+  <form [formGroup]="f" (ngSubmit)="submit()">
     <label>
       <div>Nom</div>
       <input type="text" />
@@ -14,8 +14,8 @@
       <input type="text" />
     </label>
     <nav class="buttons">
-      <button>Retour</button>
-      <button class="primary">Ajouter</button>
+      <button type="button" routerLink="..">Retour</button>
+      <button type="submit" class="primary">Ajouter</button>
     </nav>
   </form>
 </main>

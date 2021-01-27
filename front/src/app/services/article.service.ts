@@ -12,7 +12,5 @@ export class ArticleService {
     { name: 'Scie', price: 10, qty: 1000 },
     { name: 'Clé', price: 13.45, qty: 340 },
   ];
-  constructor() {
-    console.log('article service');
-  }
+  constructor() {}
 }

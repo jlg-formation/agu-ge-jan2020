@@ -1,0 +1,29 @@
+nav {
+  button {
+    margin-right: 0.3em;
+  }
+  margin-bottom: 2em;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0.1em solid #bbb;
+  thead {
+    background: #bbb;
+  }
+  td,
+  th {
+    padding: 0.5em 1em;
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background: #eee;
+    }
+
+    tr:hover {
+      cursor: pointer;
+      background: #ddd;
+    }
+  }
+}

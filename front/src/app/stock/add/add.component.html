@@ -4,6 +4,15 @@
     <label>
       <div>Nom</div>
       <input type="text" formControlName="name" />
+      <div class="error">
+        <div [hidden]="f.controls.name.valid">
+          <div *ngIf="f.controls.name.errors?.required">Champ obligatoire</div>
+          <div *ngIf="f.controls.name.errors?.minlength">
+            Le nom doit comporter au moins
+            {{ f.controls.name.errors?.minlength.requiredLength }} caractères.
+          </div>
+        </div>
+      </div>
     </label>
     <label>
       <div>Prix</div>

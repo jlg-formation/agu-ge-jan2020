@@ -3,19 +3,21 @@
   <form [formGroup]="f" (ngSubmit)="submit()">
     <label>
       <div>Nom</div>
-      <input type="text" />
+      <input type="text" formControlName="name" />
     </label>
     <label>
       <div>Prix</div>
-      <input type="text" />
+      <input type="text" formControlName="price" />
     </label>
     <label>
       <div>Quantité</div>
-      <input type="text" />
+      <input type="text" formControlName="qty" />
     </label>
     <nav class="buttons">
       <button type="button" routerLink="..">Retour</button>
-      <button type="submit" class="primary">Ajouter</button>
+      <button [disabled]="f.invalid" type="submit" class="primary">
+        Ajouter
+      </button>
     </nav>
   </form>
 </main>

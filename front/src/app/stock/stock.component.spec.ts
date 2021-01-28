@@ -25,12 +25,12 @@ describe('StockComponent', () => {
   it('should call toggle (select)', () => {
     component.selectedArticles = [];
     component.toggle(a1);
-    expect(component).toBeTruthy();
+    expect(component.selectedArticles).toEqual([a1]);
   });
   it('should call toggle (deselect)', () => {
     component.selectedArticles = [a1];
     component.toggle(a1);
-    expect(component).toBeTruthy();
+    expect(component.selectedArticles).toEqual([]);
   });
   it('should call remove', () => {
     component.remove();

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { a1 } from '../test/data';
 
 import { StockComponent } from './stock.component';
 
@@ -8,9 +9,8 @@ describe('StockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StockComponent ]
-    })
-    .compileComponents();
+      declarations: [StockComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -20,6 +20,20 @@ describe('StockComponent', () => {
   });
 
   it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+  it('should call toggle (select)', () => {
+    component.selectedArticles = [];
+    component.toggle(a1);
+    expect(component).toBeTruthy();
+  });
+  it('should call toggle (deselect)', () => {
+    component.selectedArticles = [a1];
+    component.toggle(a1);
+    expect(component).toBeTruthy();
+  });
+  it('should call remove', () => {
+    component.remove();
     expect(component).toBeTruthy();
   });
 });

@@ -23,6 +23,7 @@
           (click)="toggle(a)"
           [class.selected]="selectedArticles.includes(a)"
           *ngFor="let a of articleService.articles"
+          [id]="a.id"
         >
           <td class="name">{{ a.name }}</td>
           <td class="price">{{ a.price }} €</td>

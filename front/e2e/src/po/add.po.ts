@@ -1,8 +1,8 @@
 import { Article } from './../../../src/app/interfaces/article';
-import { browser, by, element } from 'protractor';
+import { by, element } from 'protractor';
 
 export class AddPage {
-  async fillForm(a1: Article) {
+  async fillForm(a1: Article): Promise<void> {
     for (const key of Object.keys(a1)) {
       if (key === 'id') {
         continue;
@@ -13,7 +13,7 @@ export class AddPage {
     }
   }
 
-  async submit() {
+  async submit(): Promise<void> {
     const button = element(by.css('button[type="submit"]'));
     await button.click();
   }

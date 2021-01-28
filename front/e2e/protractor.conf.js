@@ -4,6 +4,7 @@
 
 const { SpecReporter, StacktraceOption } = require("jasmine-spec-reporter");
 
+const headless = process.env.HEADLESS === "true" ? ["--headless"] : undefined;
 /**
  * @type { import("protractor").Config }
  */
@@ -11,6 +12,9 @@ exports.config = {
   allScriptsTimeout: 11000,
   specs: ["./src/**/*.e2e-spec.ts"],
   capabilities: {
+    chromeOptions: {
+      args: headless,
+    },
     browserName: "chrome",
   },
   directConnect: true,

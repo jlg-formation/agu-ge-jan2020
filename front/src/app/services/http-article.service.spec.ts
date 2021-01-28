@@ -3,9 +3,12 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
+import { environment } from 'src/environments/environment';
 import { a1, dummyArticles } from '../test/data';
 
-import { HttpArticleService, url } from './http-article.service';
+import { HttpArticleService } from './http-article.service';
+
+const url = environment.url;
 
 describe('HttpArticleService', () => {
   let service: HttpArticleService;

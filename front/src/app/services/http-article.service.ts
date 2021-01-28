@@ -2,8 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Article } from '../interfaces/article';
 import { ArticleService } from './article.service';
+import { environment } from '../../environments/environment';
 
-export const url = 'http://localhost:3000/api/articles';
+const url = environment.url;
 
 @Injectable({
   providedIn: 'root',
